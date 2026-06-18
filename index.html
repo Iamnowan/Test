@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>On This Day — Historical Events</title>
+  <meta name="description" content="Browse notable historical events for any day of the year." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>On This Day</h1>
+    <p class="tagline">Notable historical events for any day of the year</p>
+  </header>
+
+  <main>
+    <form id="date-form" class="date-picker" aria-label="Choose a date">
+      <div class="field">
+        <label for="month">Month</label>
+        <select id="month" name="month"></select>
+      </div>
+      <div class="field">
+        <label for="day">Day</label>
+        <select id="day" name="day"></select>
+      </div>
+      <button type="submit" class="btn-primary">Show events</button>
+      <button type="button" id="today-btn" class="btn-secondary">Today</button>
+    </form>
+
+    <section id="results" aria-live="polite">
+      <h2 id="results-heading"></h2>
+      <p id="status" class="status"></p>
+      <ul id="events" class="events"></ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Data from
+      <a href="https://en.wikipedia.org/api/rest_v1/" target="_blank" rel="noopener">
+        Wikipedia's "On this day" API
+      </a>. Content is licensed under
+      <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA</a>.
+    </p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
